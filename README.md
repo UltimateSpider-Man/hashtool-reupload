@@ -1,2 +1,32 @@
-# hashtool-reupload
-this is a project deleted from unknown user
+# usm_string_hash_dictionary_tool
+
+This tool converts string to hash code by using a function created by Lemon Haze.
+
+## Usage
+
+- Download the compiled [executable file](https://github.com/coyoteclan/usm_string_hash_dictionary_tool/blob/main/bin/hashtool.exe) from the [binary folder](https://github.com/coyoteclan/usm_string_hash_dictionary_tool/tree/main/bin).
+
+<img src="images/download.gif" alt="download"/>
+
+- Run the downloaded file.
+
+- Type the input string in text box and smash the "Hash!" button.
+
+<img src="images/img.png" alt="screenshot"/>
+
+## Compiling
+
+This tool is comiled with mingw compiler on linux. I have no idea how to do it on windows.
+
+Make sure you have installed `mingw-w64-i686-dev` (necessary for this compilation) or `mingw-w64` (to install the full toolchain).
+
+Type the following command to compile the tool.
+
+```bash
+i686-w64-mingw32-g++ -static-libgcc -static-libstdc++ -o hashtool.exe main.cpp hashtool.res -mwindows -luxtheme
+```
+
+If you modify the manifest file, you will need to recreate the res file first.
+```bash
+i686-w64-mingw32-windres hashtool.rc -O coff -o hashtool.res
+```
